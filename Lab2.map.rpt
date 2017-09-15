@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab2
-Mon Sep 11 00:22:04 2017
+Fri Sep 15 10:20:54 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -15,7 +15,9 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Parameter Settings for User Entity Instance: 74163:inst
- 10. Analysis & Synthesis Messages
+ 10. Parameter Settings for User Entity Instance: 7485:inst7
+ 11. Parameter Settings for User Entity Instance: 7485:inst6
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -41,13 +43,13 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                          ;
 +-----------------------------+-----------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Sep 11 00:22:04 2017   ;
+; Analysis & Synthesis Status ; Successful - Fri Sep 15 10:20:54 2017   ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name               ; Lab2                                    ;
 ; Top-level Entity Name       ; Block3                                  ;
 ; Family                      ; MAX II                                  ;
-; Total logic elements        ; 13                                      ;
-; Total pins                  ; 9                                       ;
+; Total logic elements        ; 15                                      ;
+; Total pins                  ; 17                                      ;
 ; Total virtual pins          ; 0                                       ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                           ;
 +-----------------------------+-----------------------------------------+
@@ -138,43 +140,44 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Block3.bdf                       ; yes             ; User Block Diagram/Schematic File  ; E:/quart/Block3.bdf                                       ;
 ; 74163.tdf                        ; yes             ; Megafunction                       ; c:/altera/91/quartus/libraries/others/maxplus2/74163.tdf  ;
 ; f74163.bdf                       ; yes             ; Megafunction                       ; c:/altera/91/quartus/libraries/others/maxplus2/f74163.bdf ;
-; 161mux.bdf                       ; yes             ; Megafunction                       ; c:/altera/91/quartus/libraries/others/maxplus2/161mux.bdf ;
-; 16dmux.bdf                       ; yes             ; Megafunction                       ; c:/altera/91/quartus/libraries/others/maxplus2/16dmux.bdf ;
+; 7485.tdf                         ; yes             ; Megafunction                       ; c:/altera/91/quartus/libraries/others/maxplus2/7485.tdf   ;
+; f7485.bdf                        ; yes             ; Megafunction                       ; c:/altera/91/quartus/libraries/others/maxplus2/f7485.bdf  ;
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------+
 
 
-+------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                            ;
-+---------------------------------------------+--------------------------+
-; Resource                                    ; Usage                    ;
-+---------------------------------------------+--------------------------+
-; Total logic elements                        ; 13                       ;
-;     -- Combinational with no register       ; 8                        ;
-;     -- Register only                        ; 0                        ;
-;     -- Combinational with a register        ; 5                        ;
-;                                             ;                          ;
-; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 2                        ;
-;     -- 3 input functions                    ; 4                        ;
-;     -- 2 input functions                    ; 7                        ;
-;     -- 1 input functions                    ; 0                        ;
-;     -- 0 input functions                    ; 0                        ;
-;                                             ;                          ;
-; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 13                       ;
-;     -- arithmetic mode                      ; 0                        ;
-;     -- qfbk mode                            ; 0                        ;
-;     -- register cascade mode                ; 0                        ;
-;     -- synchronous clear/load mode          ; 0                        ;
-;     -- asynchronous clear/load mode         ; 0                        ;
-;                                             ;                          ;
-; Total registers                             ; 5                        ;
-; I/O pins                                    ; 9                        ;
-; Maximum fan-out node                        ; 74163:inst|f74163:sub|34 ;
-; Maximum fan-out                             ; 8                        ;
-; Total fan-out                               ; 47                       ;
-; Average fan-out                             ; 2.14                     ;
-+---------------------------------------------+--------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Total logic elements                        ; 15                          ;
+;     -- Combinational with no register       ; 9                           ;
+;     -- Register only                        ; 0                           ;
+;     -- Combinational with a register        ; 6                           ;
+;                                             ;                             ;
+; Logic element usage by number of LUT inputs ;                             ;
+;     -- 4 input functions                    ; 4                           ;
+;     -- 3 input functions                    ; 5                           ;
+;     -- 2 input functions                    ; 6                           ;
+;     -- 1 input functions                    ; 0                           ;
+;     -- 0 input functions                    ; 0                           ;
+;                                             ;                             ;
+; Logic elements by mode                      ;                             ;
+;     -- normal mode                          ; 11                          ;
+;     -- arithmetic mode                      ; 4                           ;
+;     -- qfbk mode                            ; 0                           ;
+;     -- register cascade mode                ; 0                           ;
+;     -- synchronous clear/load mode          ; 0                           ;
+;     -- asynchronous clear/load mode         ; 0                           ;
+;                                             ;                             ;
+; Total registers                             ; 6                           ;
+; Total logic cells in carry chains           ; 5                           ;
+; I/O pins                                    ; 17                          ;
+; Maximum fan-out node                        ; 74163:inst|f74163:sub|140~0 ;
+; Maximum fan-out                             ; 6                           ;
+; Total fan-out                               ; 56                          ;
+; Average fan-out                             ; 1.75                        ;
++---------------------------------------------+-----------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -182,11 +185,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name           ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------+--------------+
-; |Block3                    ; 13 (2)      ; 5            ; 0          ; 9    ; 0            ; 8 (1)        ; 0 (0)             ; 5 (1)            ; 0 (0)           ; 0 (0)      ; |Block3                       ; work         ;
-;    |161mux:inst3|          ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Block3|161mux:inst3          ; work         ;
-;    |161mux:inst4|          ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Block3|161mux:inst4          ; work         ;
-;    |74163:inst|            ; 8 (0)       ; 4            ; 0          ; 0    ; 0            ; 4 (0)        ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |Block3|74163:inst            ; work         ;
-;       |f74163:sub|         ; 8 (8)       ; 4            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 4 (4)            ; 0 (0)           ; 0 (0)      ; |Block3|74163:inst|f74163:sub ; work         ;
+; |Block3                    ; 15 (4)      ; 6            ; 0          ; 17   ; 0            ; 9 (2)        ; 0 (0)             ; 6 (2)            ; 5 (0)           ; 0 (0)      ; |Block3                       ; work         ;
+;    |74163:inst|            ; 5 (0)       ; 4            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |Block3|74163:inst            ; work         ;
+;       |f74163:sub|         ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 5 (5)           ; 0 (0)      ; |Block3|74163:inst|f74163:sub ; work         ;
+;    |7485:inst6|            ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Block3|7485:inst6            ; work         ;
+;       |f7485:sub|          ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Block3|7485:inst6|f7485:sub  ; work         ;
+;    |7485:inst7|            ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Block3|7485:inst7            ; work         ;
+;       |f7485:sub|          ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Block3|7485:inst7|f7485:sub  ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -196,7 +201,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 5     ;
+; Total registers                              ; 6     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -220,13 +225,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: 7485:inst7 ;
++------------------------+--------+-----------------------+
+; Parameter Name         ; Value  ; Type                  ;
++------------------------+--------+-----------------------+
+; DEVICE_FAMILY          ; MAX II ; Untyped               ;
+; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY            ;
+; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY          ;
+; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE          ;
+; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE        ;
++------------------------+--------+-----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: 7485:inst6 ;
++------------------------+--------+-----------------------+
+; Parameter Name         ; Value  ; Type                  ;
++------------------------+--------+-----------------------+
+; DEVICE_FAMILY          ; MAX II ; Untyped               ;
+; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY            ;
+; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY          ;
+; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE          ;
+; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE        ;
++------------------------+--------+-----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Mon Sep 11 00:22:03 2017
+    Info: Processing started: Fri Sep 15 10:20:53 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab2 -c Lab2
 Info: Found 1 design units, including 1 entities, in source file lab2.bdf
     Info: Found entity 1: Lab2
@@ -241,28 +274,20 @@ Info: Elaborating entity "74163" for hierarchy "74163:inst"
 Info: Elaborated megafunction instantiation "74163:inst"
 Info: Elaborating entity "f74163" for hierarchy "74163:inst|f74163:sub"
 Info: Elaborated megafunction instantiation "74163:inst|f74163:sub", which is child of megafunction instantiation "74163:inst"
-Info: Elaborating entity "161mux" for hierarchy "161mux:inst4"
-Info: Elaborated megafunction instantiation "161mux:inst4"
-Info: Elaborating entity "16dmux" for hierarchy "16dmux:inst2"
-Info: Elaborated megafunction instantiation "16dmux:inst2"
-Info: Ignored 4 buffer(s)
-    Info: Ignored 4 SOFT buffer(s)
+Info: Elaborating entity "7485" for hierarchy "7485:inst7"
+Info: Elaborated megafunction instantiation "7485:inst7"
+Info: Elaborating entity "f7485" for hierarchy "7485:inst7|f7485:sub"
+Info: Elaborated megafunction instantiation "7485:inst7|f7485:sub", which is child of megafunction instantiation "7485:inst7"
+Info: Ignored 2 buffer(s)
+    Info: Ignored 2 CASCADE buffer(s)
 Info: Converted 1 single input CARRY primitives to CARRY_SUM primitives
-Warning: Ignored 2 CARRY_SUM primitives
-    Warning: Ignored 2 CARRY_SUM primitive(s) -- cannot place fan-out logic in single logic cell
-        Warning: Can't place logic fed by CARRY_SUM primitive "74163:inst|f74163:sub|107~0" into a single logic cell
-            Warning: Node "74163:inst|f74163:sub|117" of type LUT
-            Warning: Node "74163:inst|f74163:sub|120" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "74163:inst|f74163:sub|74~0" into a single logic cell
-            Warning: Node "74163:inst|f74163:sub|106" of type LUT
-            Warning: Node "74163:inst|f74163:sub|109" of type LUT
-Info: Implemented 22 device resources after synthesis - the final resource count might be different
-    Info: Implemented 1 input pins
+Info: Implemented 32 device resources after synthesis - the final resource count might be different
+    Info: Implemented 9 input pins
     Info: Implemented 8 output pins
-    Info: Implemented 13 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Implemented 15 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 238 megabytes
-    Info: Processing ended: Mon Sep 11 00:22:04 2017
+    Info: Processing ended: Fri Sep 15 10:20:54 2017
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

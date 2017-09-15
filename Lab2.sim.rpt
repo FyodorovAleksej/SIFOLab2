@@ -1,5 +1,5 @@
 Simulator report for Lab2
-Mon Sep 11 00:22:13 2017
+Fri Sep 15 10:21:03 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 34 nodes     ;
-; Simulation Coverage         ;     100.00 % ;
-; Total Number of Transitions ; 1952         ;
+; Simulation Netlist Size     ; 58 nodes     ;
+; Simulation Coverage         ;      79.31 % ;
+; Total Number of Transitions ; 1629         ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; MAX II       ;
 +-----------------------------+--------------+
@@ -93,13 +93,13 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;     100.00 % ;
-; Total nodes checked                                 ; 34           ;
-; Total output ports checked                          ; 34           ;
-; Total output ports with complete 1/0-value coverage ; 34           ;
-; Total output ports with no 1/0-value coverage       ; 0            ;
-; Total output ports with no 1-value coverage         ; 0            ;
-; Total output ports with no 0-value coverage         ; 0            ;
+; Total coverage as a percentage                      ;      79.31 % ;
+; Total nodes checked                                 ; 58           ;
+; Total output ports checked                          ; 58           ;
+; Total output ports with complete 1/0-value coverage ; 46           ;
+; Total output ports with no 1/0-value coverage       ; 12           ;
+; Total output ports with no 1-value coverage         ; 12           ;
+; Total output ports with no 0-value coverage         ; 12           ;
 +-----------------------------------------------------+--------------+
 
 
@@ -110,56 +110,94 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; Node Name                         ; Output Port Name                  ; Output Port Type ;
 +-----------------------------------+-----------------------------------+------------------+
 ; |Block3|QA                        ; |Block3|QA                        ; pin_out          ;
+; |Block3|inst14                    ; |Block3|inst14                    ; regout           ;
+; |Block3|C_in                      ; |Block3|C_in                      ; out              ;
 ; |Block3|inst13                    ; |Block3|inst13                    ; out0             ;
 ; |Block3|inst12                    ; |Block3|inst12                    ; out0             ;
-; |Block3|C_in                      ; |Block3|C_in                      ; out              ;
 ; |Block3|inst15                    ; |Block3|inst15                    ; regout           ;
 ; |Block3|inst15~0                  ; |Block3|inst15~0                  ; out0             ;
 ; |Block3|inst9                     ; |Block3|inst9                     ; out0             ;
 ; |Block3|QB                        ; |Block3|QB                        ; pin_out          ;
 ; |Block3|QC                        ; |Block3|QC                        ; pin_out          ;
-; |Block3|QD                        ; |Block3|QD                        ; pin_out          ;
 ; |Block3|out                       ; |Block3|out                       ; pin_out          ;
 ; |Block3|OUT1                      ; |Block3|OUT1                      ; pin_out          ;
 ; |Block3|OUT2                      ; |Block3|OUT2                      ; pin_out          ;
 ; |Block3|reset_signal              ; |Block3|reset_signal              ; pin_out          ;
-; |Block3|16dmux:inst1|13           ; |Block3|16dmux:inst1|13           ; out0             ;
-; |Block3|161mux:inst3|46           ; |Block3|161mux:inst3|46           ; out0             ;
-; |Block3|161mux:inst3|29           ; |Block3|161mux:inst3|29           ; out0             ;
-; |Block3|16dmux:inst2|10           ; |Block3|16dmux:inst2|10           ; out0             ;
-; |Block3|161mux:inst4|46           ; |Block3|161mux:inst4|46           ; out0             ;
-; |Block3|161mux:inst4|26           ; |Block3|161mux:inst4|26           ; out0             ;
-; |Block3|74163:inst|f74163:sub|134 ; |Block3|74163:inst|f74163:sub|134 ; regout           ;
-; |Block3|74163:inst|f74163:sub|137 ; |Block3|74163:inst|f74163:sub|137 ; out0             ;
+; |Block3|7485:inst6|f7485:sub|109  ; |Block3|7485:inst6|f7485:sub|109  ; out0             ;
+; |Block3|7485:inst6|f7485:sub|110  ; |Block3|7485:inst6|f7485:sub|110  ; out0             ;
+; |Block3|7485:inst6|f7485:sub|90   ; |Block3|7485:inst6|f7485:sub|90   ; out0             ;
+; |Block3|7485:inst6|f7485:sub|89   ; |Block3|7485:inst6|f7485:sub|89   ; out0             ;
+; |Block3|7485:inst6|f7485:sub|111  ; |Block3|7485:inst6|f7485:sub|111  ; out0             ;
+; |Block3|7485:inst6|f7485:sub|91   ; |Block3|7485:inst6|f7485:sub|91   ; out0             ;
+; |Block3|7485:inst7|f7485:sub|109  ; |Block3|7485:inst7|f7485:sub|109  ; out0             ;
+; |Block3|7485:inst7|f7485:sub|110  ; |Block3|7485:inst7|f7485:sub|110  ; out0             ;
+; |Block3|7485:inst7|f7485:sub|90   ; |Block3|7485:inst7|f7485:sub|90   ; out0             ;
+; |Block3|7485:inst7|f7485:sub|89   ; |Block3|7485:inst7|f7485:sub|89   ; out0             ;
+; |Block3|7485:inst7|f7485:sub|111  ; |Block3|7485:inst7|f7485:sub|111  ; out0             ;
+; |Block3|7485:inst7|f7485:sub|91   ; |Block3|7485:inst7|f7485:sub|91   ; out0             ;
+; |Block3|74163:inst|f74163:sub|132 ; |Block3|74163:inst|f74163:sub|132 ; out0             ;
 ; |Block3|74163:inst|f74163:sub|131 ; |Block3|74163:inst|f74163:sub|131 ; out0             ;
+; |Block3|74163:inst|f74163:sub|130 ; |Block3|74163:inst|f74163:sub|130 ; out0             ;
 ; |Block3|74163:inst|f74163:sub|117 ; |Block3|74163:inst|f74163:sub|117 ; out0             ;
 ; |Block3|74163:inst|f74163:sub|122 ; |Block3|74163:inst|f74163:sub|122 ; regout           ;
-; |Block3|74163:inst|f74163:sub|126 ; |Block3|74163:inst|f74163:sub|126 ; out0             ;
+; |Block3|74163:inst|f74163:sub|121 ; |Block3|74163:inst|f74163:sub|121 ; out0             ;
 ; |Block3|74163:inst|f74163:sub|120 ; |Block3|74163:inst|f74163:sub|120 ; out0             ;
+; |Block3|74163:inst|f74163:sub|119 ; |Block3|74163:inst|f74163:sub|119 ; out0             ;
 ; |Block3|74163:inst|f74163:sub|106 ; |Block3|74163:inst|f74163:sub|106 ; out0             ;
 ; |Block3|74163:inst|f74163:sub|111 ; |Block3|74163:inst|f74163:sub|111 ; regout           ;
-; |Block3|74163:inst|f74163:sub|115 ; |Block3|74163:inst|f74163:sub|115 ; out0             ;
+; |Block3|74163:inst|f74163:sub|110 ; |Block3|74163:inst|f74163:sub|110 ; out0             ;
 ; |Block3|74163:inst|f74163:sub|109 ; |Block3|74163:inst|f74163:sub|109 ; out0             ;
-; |Block3|74163:inst|f74163:sub|74  ; |Block3|74163:inst|f74163:sub|74  ; out0             ;
+; |Block3|74163:inst|f74163:sub|108 ; |Block3|74163:inst|f74163:sub|108 ; out0             ;
+; |Block3|74163:inst|f74163:sub|73  ; |Block3|74163:inst|f74163:sub|73  ; out0             ;
 ; |Block3|74163:inst|f74163:sub|34  ; |Block3|74163:inst|f74163:sub|34  ; regout           ;
-; |Block3|74163:inst|f74163:sub|68  ; |Block3|74163:inst|f74163:sub|68  ; out0             ;
+; |Block3|74163:inst|f74163:sub|69  ; |Block3|74163:inst|f74163:sub|69  ; out0             ;
+; |Block3|74163:inst|f74163:sub|71  ; |Block3|74163:inst|f74163:sub|71  ; out0             ;
+; |Block3|74163:inst|f74163:sub|72  ; |Block3|74163:inst|f74163:sub|72  ; out0             ;
+; |Block3|74163:inst|f74163:sub|105 ; |Block3|74163:inst|f74163:sub|105 ; out0             ;
+; |Block3|74163:inst|f74163:sub|140 ; |Block3|74163:inst|f74163:sub|140 ; out0             ;
 +-----------------------------------+-----------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+-------------------------------------------------+
-; Missing 1-Value Coverage                        ;
-+-----------+------------------+------------------+
-; Node Name ; Output Port Name ; Output Port Type ;
-+-----------+------------------+------------------+
++------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |Block3|N_2                       ; |Block3|N_2                       ; out              ;
+; |Block3|N_0                       ; |Block3|N_0                       ; out              ;
+; |Block3|N_3                       ; |Block3|N_3                       ; out              ;
+; |Block3|N_1                       ; |Block3|N_1                       ; out              ;
+; |Block3|M_2                       ; |Block3|M_2                       ; out              ;
+; |Block3|M_0                       ; |Block3|M_0                       ; out              ;
+; |Block3|M_3                       ; |Block3|M_3                       ; out              ;
+; |Block3|M_1                       ; |Block3|M_1                       ; out              ;
+; |Block3|QD                        ; |Block3|QD                        ; pin_out          ;
+; |Block3|7485:inst6|f7485:sub|92   ; |Block3|7485:inst6|f7485:sub|92   ; out0             ;
+; |Block3|7485:inst7|f7485:sub|92   ; |Block3|7485:inst7|f7485:sub|92   ; out0             ;
+; |Block3|74163:inst|f74163:sub|134 ; |Block3|74163:inst|f74163:sub|134 ; regout           ;
++-----------------------------------+-----------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+-------------------------------------------------+
-; Missing 0-Value Coverage                        ;
-+-----------+------------------+------------------+
-; Node Name ; Output Port Name ; Output Port Type ;
-+-----------+------------------+------------------+
++------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                 ;
++-----------------------------------+-----------------------------------+------------------+
+; Node Name                         ; Output Port Name                  ; Output Port Type ;
++-----------------------------------+-----------------------------------+------------------+
+; |Block3|N_2                       ; |Block3|N_2                       ; out              ;
+; |Block3|N_0                       ; |Block3|N_0                       ; out              ;
+; |Block3|N_3                       ; |Block3|N_3                       ; out              ;
+; |Block3|N_1                       ; |Block3|N_1                       ; out              ;
+; |Block3|M_2                       ; |Block3|M_2                       ; out              ;
+; |Block3|M_0                       ; |Block3|M_0                       ; out              ;
+; |Block3|M_3                       ; |Block3|M_3                       ; out              ;
+; |Block3|M_1                       ; |Block3|M_1                       ; out              ;
+; |Block3|QD                        ; |Block3|QD                        ; pin_out          ;
+; |Block3|7485:inst6|f7485:sub|92   ; |Block3|7485:inst6|f7485:sub|92   ; out0             ;
+; |Block3|7485:inst7|f7485:sub|92   ; |Block3|7485:inst7|f7485:sub|92   ; out0             ;
+; |Block3|74163:inst|f74163:sub|134 ; |Block3|74163:inst|f74163:sub|134 ; regout           ;
++-----------------------------------+-----------------------------------+------------------+
 
 
 +---------------------+
@@ -175,18 +213,17 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Mon Sep 11 00:22:13 2017
+    Info: Processing started: Fri Sep 15 10:21:03 2017
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Lab2 -c Lab2
 Info: Using vector source file "E:/quart/Lab2.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
-Warning: Found clock-sensitive change during active clock edge at time 150.0 ns on register "|Block3|inst15"
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is     100.00 %
-Info: Number of transitions in simulation is 1952
-Info: Quartus II Simulator was successful. 0 errors, 1 warning
+Info: Simulation coverage is      79.31 %
+Info: Number of transitions in simulation is 1629
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 162 megabytes
-    Info: Processing ended: Mon Sep 11 00:22:13 2017
+    Info: Processing ended: Fri Sep 15 10:21:03 2017
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
