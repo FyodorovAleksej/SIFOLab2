@@ -1,5 +1,5 @@
 Simulator report for Lab2
-Fri Sep 15 13:16:33 2017
+Fri Sep 15 16:15:07 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -44,42 +44,42 @@ applicable agreement for further details.
 ; Type                        ; Value        ;
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
-; Simulation End Time         ; 1.0 us       ;
-; Simulation Netlist Size     ; 51 nodes     ;
-; Simulation Coverage         ;      78.43 % ;
-; Total Number of Transitions ; 577          ;
+; Simulation End Time         ; 200.0 us     ;
+; Simulation Netlist Size     ; 127 nodes    ;
+; Simulation Coverage         ;      86.61 % ;
+; Total Number of Transitions ; 129846       ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; MAX II       ;
 +-----------------------------+--------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                      ;
-+--------------------------------------------------------------------------------------------+------------+---------------+
-; Option                                                                                     ; Setting    ; Default Value ;
-+--------------------------------------------------------------------------------------------+------------+---------------+
-; Simulation mode                                                                            ; Functional ; Timing        ;
-; Start time                                                                                 ; 0 ns       ; 0 ns          ;
-; Simulation results format                                                                  ; CVWF       ;               ;
-; Vector input source                                                                        ; Lab2.vwf   ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
-; Check outputs                                                                              ; Off        ; Off           ;
-; Report simulation coverage                                                                 ; On         ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
-; Display missing 1-value coverage report                                                    ; On         ; On            ;
-; Display missing 0-value coverage report                                                    ; On         ; On            ;
-; Detect setup and hold time violations                                                      ; Off        ; Off           ;
-; Detect glitches                                                                            ; Off        ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
-; Generate Signal Activity File                                                              ; Off        ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
-; Group bus channels in simulation results                                                   ; Off        ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
-+--------------------------------------------------------------------------------------------+------------+---------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                          ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+; Option                                                                                     ; Setting        ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
+; Simulation mode                                                                            ; Functional     ; Timing        ;
+; Start time                                                                                 ; 0 ns           ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF           ;               ;
+; Vector input source                                                                        ; ResultForm.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On             ; On            ;
+; Check outputs                                                                              ; Off            ; Off           ;
+; Report simulation coverage                                                                 ; On             ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On             ; On            ;
+; Display missing 1-value coverage report                                                    ; On             ; On            ;
+; Display missing 0-value coverage report                                                    ; On             ; On            ;
+; Detect setup and hold time violations                                                      ; Off            ; Off           ;
+; Detect glitches                                                                            ; Off            ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off            ; Off           ;
+; Generate Signal Activity File                                                              ; Off            ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off            ; Off           ;
+; Group bus channels in simulation results                                                   ; Off            ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On             ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE     ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off            ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off            ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto           ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------+---------------+
 
 
 +----------------------+
@@ -94,103 +94,185 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      78.43 % ;
-; Total nodes checked                                 ; 51           ;
-; Total output ports checked                          ; 51           ;
-; Total output ports with complete 1/0-value coverage ; 40           ;
-; Total output ports with no 1/0-value coverage       ; 11           ;
-; Total output ports with no 1-value coverage         ; 11           ;
-; Total output ports with no 0-value coverage         ; 11           ;
+; Total coverage as a percentage                      ;      86.61 % ;
+; Total nodes checked                                 ; 127          ;
+; Total output ports checked                          ; 127          ;
+; Total output ports with complete 1/0-value coverage ; 110          ;
+; Total output ports with no 1/0-value coverage       ; 17           ;
+; Total output ports with no 1-value coverage         ; 17           ;
+; Total output ports with no 0-value coverage         ; 17           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                              ;
-+-----------------------------------+-----------------------------------+------------------+
-; Node Name                         ; Output Port Name                  ; Output Port Type ;
-+-----------------------------------+-----------------------------------+------------------+
-; |Block3|out                       ; |Block3|out                       ; pin_out          ;
-; |Block3|inst15                    ; |Block3|inst15                    ; regout           ;
-; |Block3|inst15~0                  ; |Block3|inst15~0                  ; out0             ;
-; |Block3|inst13                    ; |Block3|inst13                    ; out0             ;
-; |Block3|inst12                    ; |Block3|inst12                    ; out0             ;
-; |Block3|inst14                    ; |Block3|inst14                    ; regout           ;
-; |Block3|C_in                      ; |Block3|C_in                      ; out              ;
-; |Block3|inst9                     ; |Block3|inst9                     ; out0             ;
-; |Block3|7485:inst6|f7485:sub|109  ; |Block3|7485:inst6|f7485:sub|109  ; out0             ;
-; |Block3|7485:inst6|f7485:sub|110  ; |Block3|7485:inst6|f7485:sub|110  ; out0             ;
-; |Block3|7485:inst6|f7485:sub|90   ; |Block3|7485:inst6|f7485:sub|90   ; out0             ;
-; |Block3|7485:inst6|f7485:sub|89   ; |Block3|7485:inst6|f7485:sub|89   ; out0             ;
-; |Block3|7485:inst6|f7485:sub|111  ; |Block3|7485:inst6|f7485:sub|111  ; out0             ;
-; |Block3|7485:inst6|f7485:sub|91   ; |Block3|7485:inst6|f7485:sub|91   ; out0             ;
-; |Block3|74163:inst|f74163:sub|132 ; |Block3|74163:inst|f74163:sub|132 ; out0             ;
-; |Block3|74163:inst|f74163:sub|131 ; |Block3|74163:inst|f74163:sub|131 ; out0             ;
-; |Block3|74163:inst|f74163:sub|130 ; |Block3|74163:inst|f74163:sub|130 ; out0             ;
-; |Block3|74163:inst|f74163:sub|117 ; |Block3|74163:inst|f74163:sub|117 ; out0             ;
-; |Block3|74163:inst|f74163:sub|122 ; |Block3|74163:inst|f74163:sub|122 ; regout           ;
-; |Block3|74163:inst|f74163:sub|121 ; |Block3|74163:inst|f74163:sub|121 ; out0             ;
-; |Block3|74163:inst|f74163:sub|120 ; |Block3|74163:inst|f74163:sub|120 ; out0             ;
-; |Block3|74163:inst|f74163:sub|119 ; |Block3|74163:inst|f74163:sub|119 ; out0             ;
-; |Block3|74163:inst|f74163:sub|106 ; |Block3|74163:inst|f74163:sub|106 ; out0             ;
-; |Block3|74163:inst|f74163:sub|111 ; |Block3|74163:inst|f74163:sub|111 ; regout           ;
-; |Block3|74163:inst|f74163:sub|110 ; |Block3|74163:inst|f74163:sub|110 ; out0             ;
-; |Block3|74163:inst|f74163:sub|109 ; |Block3|74163:inst|f74163:sub|109 ; out0             ;
-; |Block3|74163:inst|f74163:sub|108 ; |Block3|74163:inst|f74163:sub|108 ; out0             ;
-; |Block3|74163:inst|f74163:sub|73  ; |Block3|74163:inst|f74163:sub|73  ; out0             ;
-; |Block3|74163:inst|f74163:sub|34  ; |Block3|74163:inst|f74163:sub|34  ; regout           ;
-; |Block3|74163:inst|f74163:sub|69  ; |Block3|74163:inst|f74163:sub|69  ; out0             ;
-; |Block3|74163:inst|f74163:sub|71  ; |Block3|74163:inst|f74163:sub|71  ; out0             ;
-; |Block3|74163:inst|f74163:sub|72  ; |Block3|74163:inst|f74163:sub|72  ; out0             ;
-; |Block3|74163:inst|f74163:sub|105 ; |Block3|74163:inst|f74163:sub|105 ; out0             ;
-; |Block3|74163:inst|f74163:sub|140 ; |Block3|74163:inst|f74163:sub|140 ; out0             ;
-; |Block3|7485:inst7|f7485:sub|109  ; |Block3|7485:inst7|f7485:sub|109  ; out0             ;
-; |Block3|7485:inst7|f7485:sub|110  ; |Block3|7485:inst7|f7485:sub|110  ; out0             ;
-; |Block3|7485:inst7|f7485:sub|90   ; |Block3|7485:inst7|f7485:sub|90   ; out0             ;
-; |Block3|7485:inst7|f7485:sub|89   ; |Block3|7485:inst7|f7485:sub|89   ; out0             ;
-; |Block3|7485:inst7|f7485:sub|111  ; |Block3|7485:inst7|f7485:sub|111  ; out0             ;
-; |Block3|7485:inst7|f7485:sub|91   ; |Block3|7485:inst7|f7485:sub|91   ; out0             ;
-+-----------------------------------+-----------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                          ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; Node Name                                               ; Output Port Name                                        ; Output Port Type ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; |Result|Res[15]                                         ; |Result|Res[15]                                         ; pin_out          ;
+; |Result|Res[14]                                         ; |Result|Res[14]                                         ; pin_out          ;
+; |Result|Res[13]                                         ; |Result|Res[13]                                         ; pin_out          ;
+; |Result|Res[12]                                         ; |Result|Res[12]                                         ; pin_out          ;
+; |Result|Res[11]                                         ; |Result|Res[11]                                         ; pin_out          ;
+; |Result|Res[10]                                         ; |Result|Res[10]                                         ; pin_out          ;
+; |Result|Res[9]                                          ; |Result|Res[9]                                          ; pin_out          ;
+; |Result|Res[8]                                          ; |Result|Res[8]                                          ; pin_out          ;
+; |Result|Res[7]                                          ; |Result|Res[7]                                          ; pin_out          ;
+; |Result|Res[6]                                          ; |Result|Res[6]                                          ; pin_out          ;
+; |Result|Res[5]                                          ; |Result|Res[5]                                          ; pin_out          ;
+; |Result|Res[4]                                          ; |Result|Res[4]                                          ; pin_out          ;
+; |Result|Res[3]                                          ; |Result|Res[3]                                          ; pin_out          ;
+; |Result|Res[2]                                          ; |Result|Res[2]                                          ; pin_out          ;
+; |Result|Res[1]                                          ; |Result|Res[1]                                          ; pin_out          ;
+; |Result|Res[0]                                          ; |Result|Res[0]                                          ; pin_out          ;
+; |Result|C_in                                            ; |Result|C_in                                            ; out              ;
+; |Result|Block3:inst|inst15                              ; |Result|Block3:inst|inst15                              ; regout           ;
+; |Result|Block3:inst|inst15~0                            ; |Result|Block3:inst|inst15~0                            ; out0             ;
+; |Result|Block3:inst|inst13                              ; |Result|Block3:inst|inst13                              ; out0             ;
+; |Result|Block3:inst|inst12                              ; |Result|Block3:inst|inst12                              ; out0             ;
+; |Result|Block3:inst|inst14                              ; |Result|Block3:inst|inst14                              ; regout           ;
+; |Result|Block3:inst|inst9                               ; |Result|Block3:inst|inst9                               ; out0             ;
+; |Result|Block3:inst|7485:inst6|f7485:sub|109            ; |Result|Block3:inst|7485:inst6|f7485:sub|109            ; out0             ;
+; |Result|Block3:inst|7485:inst6|f7485:sub|110            ; |Result|Block3:inst|7485:inst6|f7485:sub|110            ; out0             ;
+; |Result|Block3:inst|7485:inst6|f7485:sub|90             ; |Result|Block3:inst|7485:inst6|f7485:sub|90             ; out0             ;
+; |Result|Block3:inst|7485:inst6|f7485:sub|89             ; |Result|Block3:inst|7485:inst6|f7485:sub|89             ; out0             ;
+; |Result|Block3:inst|7485:inst6|f7485:sub|111            ; |Result|Block3:inst|7485:inst6|f7485:sub|111            ; out0             ;
+; |Result|Block3:inst|7485:inst6|f7485:sub|91             ; |Result|Block3:inst|7485:inst6|f7485:sub|91             ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|132           ; |Result|Block3:inst|74163:inst|f74163:sub|132           ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|131           ; |Result|Block3:inst|74163:inst|f74163:sub|131           ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|130           ; |Result|Block3:inst|74163:inst|f74163:sub|130           ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|117           ; |Result|Block3:inst|74163:inst|f74163:sub|117           ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|122           ; |Result|Block3:inst|74163:inst|f74163:sub|122           ; regout           ;
+; |Result|Block3:inst|74163:inst|f74163:sub|121           ; |Result|Block3:inst|74163:inst|f74163:sub|121           ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|120           ; |Result|Block3:inst|74163:inst|f74163:sub|120           ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|119           ; |Result|Block3:inst|74163:inst|f74163:sub|119           ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|106           ; |Result|Block3:inst|74163:inst|f74163:sub|106           ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|111           ; |Result|Block3:inst|74163:inst|f74163:sub|111           ; regout           ;
+; |Result|Block3:inst|74163:inst|f74163:sub|110           ; |Result|Block3:inst|74163:inst|f74163:sub|110           ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|109           ; |Result|Block3:inst|74163:inst|f74163:sub|109           ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|108           ; |Result|Block3:inst|74163:inst|f74163:sub|108           ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|73            ; |Result|Block3:inst|74163:inst|f74163:sub|73            ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|34            ; |Result|Block3:inst|74163:inst|f74163:sub|34            ; regout           ;
+; |Result|Block3:inst|74163:inst|f74163:sub|69            ; |Result|Block3:inst|74163:inst|f74163:sub|69            ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|71            ; |Result|Block3:inst|74163:inst|f74163:sub|71            ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|72            ; |Result|Block3:inst|74163:inst|f74163:sub|72            ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|105           ; |Result|Block3:inst|74163:inst|f74163:sub|105           ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|140           ; |Result|Block3:inst|74163:inst|f74163:sub|140           ; out0             ;
+; |Result|Block3:inst|7485:inst7|f7485:sub|109            ; |Result|Block3:inst|7485:inst7|f7485:sub|109            ; out0             ;
+; |Result|Block3:inst|7485:inst7|f7485:sub|110            ; |Result|Block3:inst|7485:inst7|f7485:sub|110            ; out0             ;
+; |Result|Block3:inst|7485:inst7|f7485:sub|90             ; |Result|Block3:inst|7485:inst7|f7485:sub|90             ; out0             ;
+; |Result|Block3:inst|7485:inst7|f7485:sub|89             ; |Result|Block3:inst|7485:inst7|f7485:sub|89             ; out0             ;
+; |Result|Block3:inst|7485:inst7|f7485:sub|111            ; |Result|Block3:inst|7485:inst7|f7485:sub|111            ; out0             ;
+; |Result|Block3:inst|7485:inst7|f7485:sub|91             ; |Result|Block3:inst|7485:inst7|f7485:sub|91             ; out0             ;
+; |Result|DevineBlock:inst1|inst15                        ; |Result|DevineBlock:inst1|inst15                        ; regout           ;
+; |Result|DevineBlock:inst1|inst15~0                      ; |Result|DevineBlock:inst1|inst15~0                      ; out0             ;
+; |Result|DevineBlock:inst1|inst14                        ; |Result|DevineBlock:inst1|inst14                        ; regout           ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|132    ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|132    ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|131    ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|131    ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|130    ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|130    ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|117    ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|117    ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|122    ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|122    ; regout           ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|121    ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|121    ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|120    ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|120    ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|119    ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|119    ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|106    ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|106    ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|111    ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|111    ; regout           ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|110    ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|110    ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|109    ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|109    ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|108    ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|108    ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|73     ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|73     ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|34     ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|34     ; regout           ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|69     ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|69     ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|71     ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|71     ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|72     ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|72     ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|105    ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|105    ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|140    ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|140    ; out0             ;
+; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|109      ; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|109      ; out0             ;
+; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|110      ; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|110      ; out0             ;
+; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|90       ; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|90       ; out0             ;
+; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|89       ; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|89       ; out0             ;
+; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|111      ; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|111      ; out0             ;
+; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|91       ; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|91       ; out0             ;
+; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|134 ; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|134 ; regout           ;
+; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|131 ; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|131 ; out0             ;
+; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|117 ; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|117 ; out0             ;
+; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|122 ; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|122 ; regout           ;
+; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|120 ; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|120 ; out0             ;
+; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|106 ; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|106 ; out0             ;
+; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|111 ; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|111 ; regout           ;
+; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|109 ; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|109 ; out0             ;
+; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|74  ; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|74  ; out0             ;
+; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|34  ; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub|34  ; regout           ;
+; |Result|DivergentBlock:inst2|16dmux:inst|24             ; |Result|DivergentBlock:inst2|16dmux:inst|24             ; out0             ;
+; |Result|DivergentBlock:inst2|16dmux:inst|22             ; |Result|DivergentBlock:inst2|16dmux:inst|22             ; out0             ;
+; |Result|DivergentBlock:inst2|16dmux:inst|20             ; |Result|DivergentBlock:inst2|16dmux:inst|20             ; out0             ;
+; |Result|DivergentBlock:inst2|16dmux:inst|14             ; |Result|DivergentBlock:inst2|16dmux:inst|14             ; out0             ;
+; |Result|DivergentBlock:inst2|16dmux:inst|13             ; |Result|DivergentBlock:inst2|16dmux:inst|13             ; out0             ;
+; |Result|DivergentBlock:inst2|16dmux:inst|12             ; |Result|DivergentBlock:inst2|16dmux:inst|12             ; out0             ;
+; |Result|DivergentBlock:inst2|16dmux:inst|11             ; |Result|DivergentBlock:inst2|16dmux:inst|11             ; out0             ;
+; |Result|DivergentBlock:inst2|16dmux:inst|10             ; |Result|DivergentBlock:inst2|16dmux:inst|10             ; out0             ;
+; |Result|DivergentBlock:inst2|16dmux:inst|26             ; |Result|DivergentBlock:inst2|16dmux:inst|26             ; out0             ;
+; |Result|DivergentBlock:inst2|16dmux:inst|27             ; |Result|DivergentBlock:inst2|16dmux:inst|27             ; out0             ;
+; |Result|DivergentBlock:inst2|16dmux:inst|28             ; |Result|DivergentBlock:inst2|16dmux:inst|28             ; out0             ;
+; |Result|DivergentBlock:inst2|16dmux:inst|29             ; |Result|DivergentBlock:inst2|16dmux:inst|29             ; out0             ;
+; |Result|DivergentBlock:inst2|16dmux:inst|30             ; |Result|DivergentBlock:inst2|16dmux:inst|30             ; out0             ;
+; |Result|DivergentBlock:inst2|16dmux:inst|31             ; |Result|DivergentBlock:inst2|16dmux:inst|31             ; out0             ;
+; |Result|DivergentBlock:inst2|16dmux:inst|32             ; |Result|DivergentBlock:inst2|16dmux:inst|32             ; out0             ;
+; |Result|DivergentBlock:inst2|16dmux:inst|33             ; |Result|DivergentBlock:inst2|16dmux:inst|33             ; out0             ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+------------------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                                 ;
-+-----------------------------------+-----------------------------------+------------------+
-; Node Name                         ; Output Port Name                  ; Output Port Type ;
-+-----------------------------------+-----------------------------------+------------------+
-; |Block3|N_2                       ; |Block3|N_2                       ; out              ;
-; |Block3|N_0                       ; |Block3|N_0                       ; out              ;
-; |Block3|N_3                       ; |Block3|N_3                       ; out              ;
-; |Block3|N_1                       ; |Block3|N_1                       ; out              ;
-; |Block3|M_2                       ; |Block3|M_2                       ; out              ;
-; |Block3|M_0                       ; |Block3|M_0                       ; out              ;
-; |Block3|M_3                       ; |Block3|M_3                       ; out              ;
-; |Block3|M_1                       ; |Block3|M_1                       ; out              ;
-; |Block3|7485:inst6|f7485:sub|92   ; |Block3|7485:inst6|f7485:sub|92   ; out0             ;
-; |Block3|74163:inst|f74163:sub|134 ; |Block3|74163:inst|f74163:sub|134 ; regout           ;
-; |Block3|7485:inst7|f7485:sub|92   ; |Block3|7485:inst7|f7485:sub|92   ; out0             ;
-+-----------------------------------+-----------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                       ;
++------------------------------------------------------+------------------------------------------------------+------------------+
+; Node Name                                            ; Output Port Name                                     ; Output Port Type ;
++------------------------------------------------------+------------------------------------------------------+------------------+
+; |Result|M_0                                          ; |Result|M_0                                          ; out              ;
+; |Result|M_1                                          ; |Result|M_1                                          ; out              ;
+; |Result|M_2                                          ; |Result|M_2                                          ; out              ;
+; |Result|M_3                                          ; |Result|M_3                                          ; out              ;
+; |Result|N_0                                          ; |Result|N_0                                          ; out              ;
+; |Result|N_1                                          ; |Result|N_1                                          ; out              ;
+; |Result|N_2                                          ; |Result|N_2                                          ; out              ;
+; |Result|N_3                                          ; |Result|N_3                                          ; out              ;
+; |Result|D_0                                          ; |Result|D_0                                          ; out              ;
+; |Result|D_1                                          ; |Result|D_1                                          ; out              ;
+; |Result|D_2                                          ; |Result|D_2                                          ; out              ;
+; |Result|D_3                                          ; |Result|D_3                                          ; out              ;
+; |Result|Block3:inst|7485:inst6|f7485:sub|92          ; |Result|Block3:inst|7485:inst6|f7485:sub|92          ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|134        ; |Result|Block3:inst|74163:inst|f74163:sub|134        ; regout           ;
+; |Result|Block3:inst|7485:inst7|f7485:sub|92          ; |Result|Block3:inst|7485:inst7|f7485:sub|92          ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|134 ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|134 ; regout           ;
+; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|92    ; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|92    ; out0             ;
++------------------------------------------------------+------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+------------------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                                 ;
-+-----------------------------------+-----------------------------------+------------------+
-; Node Name                         ; Output Port Name                  ; Output Port Type ;
-+-----------------------------------+-----------------------------------+------------------+
-; |Block3|N_2                       ; |Block3|N_2                       ; out              ;
-; |Block3|N_0                       ; |Block3|N_0                       ; out              ;
-; |Block3|N_3                       ; |Block3|N_3                       ; out              ;
-; |Block3|N_1                       ; |Block3|N_1                       ; out              ;
-; |Block3|M_2                       ; |Block3|M_2                       ; out              ;
-; |Block3|M_0                       ; |Block3|M_0                       ; out              ;
-; |Block3|M_3                       ; |Block3|M_3                       ; out              ;
-; |Block3|M_1                       ; |Block3|M_1                       ; out              ;
-; |Block3|7485:inst6|f7485:sub|92   ; |Block3|7485:inst6|f7485:sub|92   ; out0             ;
-; |Block3|74163:inst|f74163:sub|134 ; |Block3|74163:inst|f74163:sub|134 ; regout           ;
-; |Block3|7485:inst7|f7485:sub|92   ; |Block3|7485:inst7|f7485:sub|92   ; out0             ;
-+-----------------------------------+-----------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                       ;
++------------------------------------------------------+------------------------------------------------------+------------------+
+; Node Name                                            ; Output Port Name                                     ; Output Port Type ;
++------------------------------------------------------+------------------------------------------------------+------------------+
+; |Result|M_0                                          ; |Result|M_0                                          ; out              ;
+; |Result|M_1                                          ; |Result|M_1                                          ; out              ;
+; |Result|M_2                                          ; |Result|M_2                                          ; out              ;
+; |Result|M_3                                          ; |Result|M_3                                          ; out              ;
+; |Result|N_0                                          ; |Result|N_0                                          ; out              ;
+; |Result|N_1                                          ; |Result|N_1                                          ; out              ;
+; |Result|N_2                                          ; |Result|N_2                                          ; out              ;
+; |Result|N_3                                          ; |Result|N_3                                          ; out              ;
+; |Result|D_0                                          ; |Result|D_0                                          ; out              ;
+; |Result|D_1                                          ; |Result|D_1                                          ; out              ;
+; |Result|D_2                                          ; |Result|D_2                                          ; out              ;
+; |Result|D_3                                          ; |Result|D_3                                          ; out              ;
+; |Result|Block3:inst|7485:inst6|f7485:sub|92          ; |Result|Block3:inst|7485:inst6|f7485:sub|92          ; out0             ;
+; |Result|Block3:inst|74163:inst|f74163:sub|134        ; |Result|Block3:inst|74163:inst|f74163:sub|134        ; regout           ;
+; |Result|Block3:inst|7485:inst7|f7485:sub|92          ; |Result|Block3:inst|7485:inst7|f7485:sub|92          ; out0             ;
+; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|134 ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub|134 ; regout           ;
+; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|92    ; |Result|DevineBlock:inst1|7485:inst7|f7485:sub|92    ; out0             ;
++------------------------------------------------------+------------------------------------------------------+------------------+
 
 
 +---------------------+
@@ -203,21 +285,5 @@ The following table displays output ports that do not toggle to 0 during simulat
 +--------------------+
 ; Simulator Messages ;
 +--------------------+
-Info: *******************************************************************
-Info: Running Quartus II Simulator
-    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Fri Sep 15 13:16:32 2017
-Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Lab2 -c Lab2
-Info: Using vector source file "E:/quart/Lab2.vwf"
-Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
-    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
-Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      78.43 %
-Info: Number of transitions in simulation is 577
-Info: Quartus II Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 162 megabytes
-    Info: Processing ended: Fri Sep 15 13:16:33 2017
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
 
 

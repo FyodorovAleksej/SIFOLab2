@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE AUTO
-set_global_assignment -name TOP_LEVEL_ENTITY DivergentBlock
+set_global_assignment -name TOP_LEVEL_ENTITY Result
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:51:27  SEPTEMBER 06, 2017"
 set_global_assignment -name LAST_QUARTUS_VERSION 9.1
@@ -57,8 +57,10 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name BDF_FILE DevineBlock.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE DevineForm.vwf
 set_global_assignment -name BDF_FILE DivergentBlock.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE DevergentForm.vwf
+set_global_assignment -name BDF_FILE Result.bdf
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_instance_assignment -name CLOCK_SETTINGS notStandard -to C_in
-set_global_assignment -name VECTOR_WAVEFORM_FILE DevergentForm.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE DevergentForm.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ResultForm.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE ResultForm.vwf

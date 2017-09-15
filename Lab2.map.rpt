@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab2
-Fri Sep 15 13:28:06 2017
+Fri Sep 15 16:09:01 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -14,8 +14,13 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: 74163:inst1
- 10. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: DivergentBlock:inst2|74163:inst1
+ 10. Parameter Settings for User Entity Instance: DevineBlock:inst1|7485:inst7
+ 11. Parameter Settings for User Entity Instance: DevineBlock:inst1|74163:inst9
+ 12. Parameter Settings for User Entity Instance: Block3:inst|7485:inst7
+ 13. Parameter Settings for User Entity Instance: Block3:inst|74163:inst
+ 14. Parameter Settings for User Entity Instance: Block3:inst|7485:inst6
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -41,13 +46,13 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                          ;
 +-----------------------------+-----------------------------------------+
-; Analysis & Synthesis Status ; Successful - Fri Sep 15 13:28:06 2017   ;
+; Analysis & Synthesis Status ; Successful - Fri Sep 15 16:09:01 2017   ;
 ; Quartus II Version          ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name               ; Lab2                                    ;
-; Top-level Entity Name       ; DivergentBlock                          ;
+; Top-level Entity Name       ; Result                                  ;
 ; Family                      ; MAX II                                  ;
-; Total logic elements        ; 20                                      ;
-; Total pins                  ; 17                                      ;
+; Total logic elements        ; 43                                      ;
+; Total pins                  ; 29                                      ;
 ; Total virtual pins          ; 0                                       ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                           ;
 +-----------------------------+-----------------------------------------+
@@ -58,7 +63,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; DivergentBlock     ; Lab2               ;
+; Top-level entity name                                                      ; Result             ; Lab2               ;
 ; Family name                                                                ; MAX II             ; Stratix II         ;
 ; Use Generated Physical Constraints File                                    ; Off                ;                    ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -135,58 +140,74 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                              ;
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------+
+; Block3.bdf                       ; yes             ; User Block Diagram/Schematic File  ; E:/quart/Block3.bdf                                       ;
+; DevineBlock.bdf                  ; yes             ; User Block Diagram/Schematic File  ; E:/quart/DevineBlock.bdf                                  ;
 ; DivergentBlock.bdf               ; yes             ; User Block Diagram/Schematic File  ; E:/quart/DivergentBlock.bdf                               ;
+; Result.bdf                       ; yes             ; User Block Diagram/Schematic File  ; E:/quart/Result.bdf                                       ;
 ; 16dmux.bdf                       ; yes             ; Megafunction                       ; c:/altera/91/quartus/libraries/others/maxplus2/16dmux.bdf ;
 ; 74163.tdf                        ; yes             ; Megafunction                       ; c:/altera/91/quartus/libraries/others/maxplus2/74163.tdf  ;
 ; f74163.bdf                       ; yes             ; Megafunction                       ; c:/altera/91/quartus/libraries/others/maxplus2/f74163.bdf ;
+; 7485.tdf                         ; yes             ; Megafunction                       ; c:/altera/91/quartus/libraries/others/maxplus2/7485.tdf   ;
+; f7485.bdf                        ; yes             ; Megafunction                       ; c:/altera/91/quartus/libraries/others/maxplus2/f7485.bdf  ;
 +----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                             ;
-+---------------------------------------------+---------------------------+
-; Resource                                    ; Usage                     ;
-+---------------------------------------------+---------------------------+
-; Total logic elements                        ; 20                        ;
-;     -- Combinational with no register       ; 16                        ;
-;     -- Register only                        ; 0                         ;
-;     -- Combinational with a register        ; 4                         ;
-;                                             ;                           ;
-; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 16                        ;
-;     -- 3 input functions                    ; 0                         ;
-;     -- 2 input functions                    ; 3                         ;
-;     -- 1 input functions                    ; 1                         ;
-;     -- 0 input functions                    ; 0                         ;
-;                                             ;                           ;
-; Logic elements by mode                      ;                           ;
-;     -- normal mode                          ; 17                        ;
-;     -- arithmetic mode                      ; 3                         ;
-;     -- qfbk mode                            ; 0                         ;
-;     -- register cascade mode                ; 0                         ;
-;     -- synchronous clear/load mode          ; 0                         ;
-;     -- asynchronous clear/load mode         ; 0                         ;
-;                                             ;                           ;
-; Total registers                             ; 4                         ;
-; Total logic cells in carry chains           ; 4                         ;
-; I/O pins                                    ; 17                        ;
-; Maximum fan-out node                        ; 74163:inst1|f74163:sub|34 ;
-; Maximum fan-out                             ; 18                        ;
-; Total fan-out                               ; 91                        ;
-; Average fan-out                             ; 2.46                      ;
-+---------------------------------------------+---------------------------+
++----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                  ;
++---------------------------------------------+------------------------------------------------+
+; Resource                                    ; Usage                                          ;
++---------------------------------------------+------------------------------------------------+
+; Total logic elements                        ; 43                                             ;
+;     -- Combinational with no register       ; 27                                             ;
+;     -- Register only                        ; 0                                              ;
+;     -- Combinational with a register        ; 16                                             ;
+;                                             ;                                                ;
+; Logic element usage by number of LUT inputs ;                                                ;
+;     -- 4 input functions                    ; 23                                             ;
+;     -- 3 input functions                    ; 10                                             ;
+;     -- 2 input functions                    ; 9                                              ;
+;     -- 1 input functions                    ; 1                                              ;
+;     -- 0 input functions                    ; 0                                              ;
+;                                             ;                                                ;
+; Logic elements by mode                      ;                                                ;
+;     -- normal mode                          ; 32                                             ;
+;     -- arithmetic mode                      ; 11                                             ;
+;     -- qfbk mode                            ; 0                                              ;
+;     -- register cascade mode                ; 0                                              ;
+;     -- synchronous clear/load mode          ; 0                                              ;
+;     -- asynchronous clear/load mode         ; 0                                              ;
+;                                             ;                                                ;
+; Total registers                             ; 16                                             ;
+; Total logic cells in carry chains           ; 14                                             ;
+; I/O pins                                    ; 29                                             ;
+; Maximum fan-out node                        ; DivergentBlock:inst2|74163:inst1|f74163:sub|34 ;
+; Maximum fan-out                             ; 18                                             ;
+; Total fan-out                               ; 171                                            ;
+; Average fan-out                             ; 2.38                                           ;
++---------------------------------------------+------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                     ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                    ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------+--------------+
-; |DivergentBlock            ; 20 (0)      ; 4            ; 0          ; 17   ; 0            ; 16 (0)       ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |DivergentBlock                        ; work         ;
-;    |16dmux:inst|           ; 16 (16)     ; 0            ; 0          ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DivergentBlock|16dmux:inst            ; work         ;
-;    |74163:inst1|           ; 4 (0)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |DivergentBlock|74163:inst1            ; work         ;
-;       |f74163:sub|         ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 4 (4)           ; 0 (0)      ; |DivergentBlock|74163:inst1|f74163:sub ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                  ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                 ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------+--------------+
+; |Result                    ; 43 (0)      ; 16           ; 0          ; 29   ; 0            ; 27 (0)       ; 0 (0)             ; 16 (0)           ; 14 (0)          ; 0 (0)      ; |Result                                             ; work         ;
+;    |Block3:inst|           ; 14 (8)      ; 6            ; 0          ; 0    ; 0            ; 8 (6)        ; 0 (0)             ; 6 (2)            ; 5 (0)           ; 0 (0)      ; |Result|Block3:inst                                 ; work         ;
+;       |74163:inst|         ; 5 (0)       ; 4            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |Result|Block3:inst|74163:inst                      ; work         ;
+;          |f74163:sub|      ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 5 (5)           ; 0 (0)      ; |Result|Block3:inst|74163:inst|f74163:sub           ; work         ;
+;       |7485:inst6|         ; 1 (0)       ; 0            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Result|Block3:inst|7485:inst6                      ; work         ;
+;          |f7485:sub|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Result|Block3:inst|7485:inst6|f7485:sub            ; work         ;
+;    |DevineBlock:inst1|     ; 9 (2)       ; 6            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 6 (2)            ; 5 (0)           ; 0 (0)      ; |Result|DevineBlock:inst1                           ; work         ;
+;       |74163:inst9|        ; 5 (0)       ; 4            ; 0          ; 0    ; 0            ; 1 (0)        ; 0 (0)             ; 4 (0)            ; 5 (0)           ; 0 (0)      ; |Result|DevineBlock:inst1|74163:inst9               ; work         ;
+;          |f74163:sub|      ; 5 (5)       ; 4            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; 5 (5)           ; 0 (0)      ; |Result|DevineBlock:inst1|74163:inst9|f74163:sub    ; work         ;
+;       |7485:inst7|         ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Result|DevineBlock:inst1|7485:inst7                ; work         ;
+;          |f7485:sub|       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Result|DevineBlock:inst1|7485:inst7|f7485:sub      ; work         ;
+;    |DivergentBlock:inst2|  ; 20 (0)      ; 4            ; 0          ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |Result|DivergentBlock:inst2                        ; work         ;
+;       |16dmux:inst|        ; 16 (16)     ; 0            ; 0          ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Result|DivergentBlock:inst2|16dmux:inst            ; work         ;
+;       |74163:inst1|        ; 4 (0)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 4 (0)           ; 0 (0)      ; |Result|DivergentBlock:inst2|74163:inst1            ; work         ;
+;          |f74163:sub|      ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 4 (4)           ; 0 (0)      ; |Result|DivergentBlock:inst2|74163:inst1|f74163:sub ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -195,7 +216,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
+; Total registers                              ; 16    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -205,17 +226,87 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: 74163:inst1 ;
-+------------------------+--------+------------------------+
-; Parameter Name         ; Value  ; Type                   ;
-+------------------------+--------+------------------------+
-; DEVICE_FAMILY          ; MAX II ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE         ;
-+------------------------+--------+------------------------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DivergentBlock:inst2|74163:inst1 ;
++------------------------+--------+---------------------------------------------+
+; Parameter Name         ; Value  ; Type                                        ;
++------------------------+--------+---------------------------------------------+
+; DEVICE_FAMILY          ; MAX II ; Untyped                                     ;
+; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE                              ;
++------------------------+--------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DevineBlock:inst1|7485:inst7 ;
++------------------------+--------+-----------------------------------------+
+; Parameter Name         ; Value  ; Type                                    ;
++------------------------+--------+-----------------------------------------+
+; DEVICE_FAMILY          ; MAX II ; Untyped                                 ;
+; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE                          ;
++------------------------+--------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DevineBlock:inst1|74163:inst9 ;
++------------------------+--------+------------------------------------------+
+; Parameter Name         ; Value  ; Type                                     ;
++------------------------+--------+------------------------------------------+
+; DEVICE_FAMILY          ; MAX II ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE                           ;
++------------------------+--------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block3:inst|7485:inst7 ;
++------------------------+--------+-----------------------------------+
+; Parameter Name         ; Value  ; Type                              ;
++------------------------+--------+-----------------------------------+
+; DEVICE_FAMILY          ; MAX II ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE                    ;
++------------------------+--------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block3:inst|74163:inst ;
++------------------------+--------+-----------------------------------+
+; Parameter Name         ; Value  ; Type                              ;
++------------------------+--------+-----------------------------------+
+; DEVICE_FAMILY          ; MAX II ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE                    ;
++------------------------+--------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Block3:inst|7485:inst6 ;
++------------------------+--------+-----------------------------------+
+; Parameter Name         ; Value  ; Type                              ;
++------------------------+--------+-----------------------------------+
+; DEVICE_FAMILY          ; MAX II ; Untyped                           ;
+; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY                      ;
+; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE                    ;
++------------------------+--------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -225,7 +316,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Fri Sep 15 13:28:05 2017
+    Info: Processing started: Fri Sep 15 16:08:59 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab2 -c Lab2
 Info: Found 1 design units, including 1 entities, in source file lab2.bdf
     Info: Found entity 1: Lab2
@@ -239,22 +330,35 @@ Info: Found 1 design units, including 1 entities, in source file devineblock.bdf
     Info: Found entity 1: DevineBlock
 Info: Found 1 design units, including 1 entities, in source file divergentblock.bdf
     Info: Found entity 1: DivergentBlock
-Info: Elaborating entity "DivergentBlock" for the top level hierarchy
-Info: Elaborating entity "16dmux" for hierarchy "16dmux:inst"
-Info: Elaborated megafunction instantiation "16dmux:inst"
-Info: Elaborating entity "74163" for hierarchy "74163:inst1"
-Info: Elaborated megafunction instantiation "74163:inst1"
-Info: Elaborating entity "f74163" for hierarchy "74163:inst1|f74163:sub"
-Info: Elaborated megafunction instantiation "74163:inst1|f74163:sub", which is child of megafunction instantiation "74163:inst1"
-Info: Converted 1 single input CARRY primitives to CARRY_SUM primitives
-Info: Implemented 37 device resources after synthesis - the final resource count might be different
-    Info: Implemented 1 input pins
+Info: Found 1 design units, including 1 entities, in source file result.bdf
+    Info: Found entity 1: Result
+Info: Elaborating entity "Result" for the top level hierarchy
+Info: Elaborating entity "DivergentBlock" for hierarchy "DivergentBlock:inst2"
+Info: Elaborating entity "16dmux" for hierarchy "DivergentBlock:inst2|16dmux:inst"
+Info: Elaborated megafunction instantiation "DivergentBlock:inst2|16dmux:inst"
+Info: Elaborating entity "74163" for hierarchy "DivergentBlock:inst2|74163:inst1"
+Info: Elaborated megafunction instantiation "DivergentBlock:inst2|74163:inst1"
+Info: Elaborating entity "f74163" for hierarchy "DivergentBlock:inst2|74163:inst1|f74163:sub"
+Info: Elaborated megafunction instantiation "DivergentBlock:inst2|74163:inst1|f74163:sub", which is child of megafunction instantiation "DivergentBlock:inst2|74163:inst1"
+Info: Elaborating entity "DevineBlock" for hierarchy "DevineBlock:inst1"
+Info: Elaborating entity "7485" for hierarchy "DevineBlock:inst1|7485:inst7"
+Info: Elaborated megafunction instantiation "DevineBlock:inst1|7485:inst7"
+Info: Elaborating entity "f7485" for hierarchy "DevineBlock:inst1|7485:inst7|f7485:sub"
+Info: Elaborated megafunction instantiation "DevineBlock:inst1|7485:inst7|f7485:sub", which is child of megafunction instantiation "DevineBlock:inst1|7485:inst7"
+Info: Elaborating entity "74163" for hierarchy "DevineBlock:inst1|74163:inst9"
+Info: Elaborated megafunction instantiation "DevineBlock:inst1|74163:inst9"
+Info: Elaborating entity "Block3" for hierarchy "Block3:inst"
+Info: Ignored 3 buffer(s)
+    Info: Ignored 3 CASCADE buffer(s)
+Info: Converted 3 single input CARRY primitives to CARRY_SUM primitives
+Info: Implemented 72 device resources after synthesis - the final resource count might be different
+    Info: Implemented 13 input pins
     Info: Implemented 16 output pins
-    Info: Implemented 20 logic cells
+    Info: Implemented 43 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 238 megabytes
-    Info: Processing ended: Fri Sep 15 13:28:06 2017
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Processing ended: Fri Sep 15 16:09:01 2017
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
