@@ -5,29 +5,29 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.273 ns
-From           : 74163:inst|f74163:sub|134
-To             : reset_signal
+Actual Time    : 6.552 ns
+From           : inst15
+To             : out
 From Clock     : C_in
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Clock Setup: 'C_in'
-Slack          : 7.246 ns
-Required Time  : 50.00 MHz ( period = 20.000 ns )
-Actual Time    : 181.55 MHz ( period = 5.508 ns )
-From           : inst15
-To             : 74163:inst|f74163:sub|34
+Slack          : 21.427 ns
+Required Time  : 20.00 MHz ( period = 50.000 ns )
+Actual Time    : 139.94 MHz ( period = 7.146 ns )
+From           : inst14
+To             : 74163:inst|f74163:sub|134
 From Clock     : C_in
 To Clock       : C_in
 Failed Paths   : 0
 
 Type           : Clock Hold: 'C_in'
-Slack          : 1.064 ns
-Required Time  : 50.00 MHz ( period = 20.000 ns )
+Slack          : 0.931 ns
+Required Time  : 20.00 MHz ( period = 50.000 ns )
 Actual Time    : N/A
-From           : 74163:inst|f74163:sub|134
-To             : 74163:inst|f74163:sub|134
+From           : inst15
+To             : inst7
 From Clock     : C_in
 To Clock       : C_in
 Failed Paths   : 0

@@ -26,7 +26,7 @@ HEADER
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
 	DATA_DURATION = 1000.0;
-	SIMULATION_TIME = 0.0;
+	SIMULATION_TIME = 1000.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
 	GRID_DUTY_CYCLE = 50;
@@ -231,7 +231,15 @@ TRANSITION_LIST("Res[15]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 145.0;
+		NODE
+		{
+			REPEAT = 5;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 45.0;
 	}
 }
 
@@ -240,7 +248,15 @@ TRANSITION_LIST("Res[14]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 135.0;
+		NODE
+		{
+			REPEAT = 5;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 55.0;
 	}
 }
 
@@ -249,7 +265,15 @@ TRANSITION_LIST("Res[13]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 125.0;
+		NODE
+		{
+			REPEAT = 5;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 65.0;
 	}
 }
 
@@ -258,7 +282,15 @@ TRANSITION_LIST("Res[12]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 115.0;
+		NODE
+		{
+			REPEAT = 5;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 75.0;
 	}
 }
 
@@ -267,7 +299,15 @@ TRANSITION_LIST("Res[11]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 105.0;
+		NODE
+		{
+			REPEAT = 5;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 85.0;
 	}
 }
 
@@ -276,7 +316,15 @@ TRANSITION_LIST("Res[10]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 95.0;
+		NODE
+		{
+			REPEAT = 5;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 95.0;
 	}
 }
 
@@ -285,7 +333,15 @@ TRANSITION_LIST("Res[9]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 85.0;
+		NODE
+		{
+			REPEAT = 5;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 105.0;
 	}
 }
 
@@ -294,7 +350,15 @@ TRANSITION_LIST("Res[8]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 75.0;
+		NODE
+		{
+			REPEAT = 5;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 115.0;
 	}
 }
 
@@ -303,7 +367,15 @@ TRANSITION_LIST("Res[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 65.0;
+		NODE
+		{
+			REPEAT = 5;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 125.0;
 	}
 }
 
@@ -312,7 +384,15 @@ TRANSITION_LIST("Res[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 55.0;
+		NODE
+		{
+			REPEAT = 5;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 135.0;
 	}
 }
 
@@ -321,7 +401,15 @@ TRANSITION_LIST("Res[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 45.0;
+		NODE
+		{
+			REPEAT = 5;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 145.0;
 	}
 }
 
@@ -330,7 +418,14 @@ TRANSITION_LIST("Res[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 35.0;
+		NODE
+		{
+			REPEAT = 6;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 5.0;
 	}
 }
 
@@ -339,7 +434,15 @@ TRANSITION_LIST("Res[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 25.0;
+		NODE
+		{
+			REPEAT = 6;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 5.0;
 	}
 }
 
@@ -348,7 +451,15 @@ TRANSITION_LIST("Res[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 15.0;
+		NODE
+		{
+			REPEAT = 6;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 15.0;
 	}
 }
 
@@ -357,7 +468,15 @@ TRANSITION_LIST("Res[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 0 FOR 5.0;
+		NODE
+		{
+			REPEAT = 6;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 150.0;
+		}
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 25.0;
 	}
 }
 
@@ -366,7 +485,14 @@ TRANSITION_LIST("Res[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL 1 FOR 5.0;
+		NODE
+		{
+			REPEAT = 6;
+			LEVEL 0 FOR 150.0;
+			LEVEL 1 FOR 10.0;
+		}
+		LEVEL 0 FOR 35.0;
 	}
 }
 

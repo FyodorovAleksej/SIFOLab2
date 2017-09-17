@@ -37,8 +37,8 @@ expand_groups 0\
 print_all 1\
 print_row_height 100";
 	DATA_OFFSET = 0.0;
-	DATA_DURATION = 4000.0;
-	SIMULATION_TIME = 4000.0;
+	DATA_DURATION = 1000.0;
+	SIMULATION_TIME = 1000.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
 	GRID_DUTY_CYCLE = 50;
@@ -71,9 +71,9 @@ TRANSITION_LIST("C_in")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 400;
-			LEVEL 0 FOR 6.0;
-			LEVEL 1 FOR 4.0;
+			REPEAT = 100;
+			LEVEL 0 FOR 7.5;
+			LEVEL 1 FOR 2.5;
 		}
 	}
 }
@@ -83,15 +83,7 @@ TRANSITION_LIST("out")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 46.0;
-		NODE
-		{
-			REPEAT = 65;
-			LEVEL 1 FOR 24.0;
-			LEVEL 0 FOR 36.0;
-		}
-		LEVEL 1 FOR 24.0;
-		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -115,19 +107,7 @@ DISPLAY_LINE
 
 TIME_BAR
 {
-	TIME = 106000;
-	MASTER = TRUE;
-}
-
-TIME_BAR
-{
-	TIME = 106000;
-	MASTER = TRUE;
-}
-
-TIME_BAR
-{
-	TIME = 106000;
+	TIME = 200000;
 	MASTER = TRUE;
 }
 ;

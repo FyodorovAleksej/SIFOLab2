@@ -1,5 +1,5 @@
 Flow report for Lab2
-Fri Sep 15 16:09:01 2017
+Sun Sep 17 17:37:42 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -38,14 +38,14 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; Flow Summary                                                      ;
 +-------------------------+-----------------------------------------+
-; Flow Status             ; Successful - Fri Sep 15 16:09:01 2017   ;
+; Flow Status             ; Successful - Sun Sep 17 17:37:42 2017   ;
 ; Quartus II Version      ; 9.1 Build 222 10/21/2009 SJ Web Edition ;
 ; Revision Name           ; Lab2                                    ;
 ; Top-level Entity Name   ; Result                                  ;
 ; Family                  ; MAX II                                  ;
 ; Met timing requirements ; N/A                                     ;
-; Total logic elements    ; 43                                      ;
-; Total pins              ; 29                                      ;
+; Total logic elements    ; 45                                      ;
+; Total pins              ; 26                                      ;
 ; Total virtual pins      ; 0                                       ;
 ; UFM blocks              ; 0 / 1 ( 0 % )                           ;
 +-------------------------+-----------------------------------------+
@@ -56,7 +56,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/15/2017 16:09:00 ;
+; Start date & time ; 09/17/2017 17:37:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab2                ;
 +-------------------+---------------------+
@@ -67,7 +67,7 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 264390077223549.150548094005140 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 264390077223549.150565906107004 ; --            ; --          ; --             ;
 ; TOP_LEVEL_ENTITY                   ; Result                          ; Lab2          ; --          ; --             ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --          ; eda_blast_fpga ;
 +------------------------------------+---------------------------------+---------------+-------------+----------------+
@@ -78,8 +78,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 238 MB              ; 00:00:02                           ;
-; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 238 MB              ; 00:00:02                           ;
+; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
